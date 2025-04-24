@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEÜ Uzay ve Havacılık Portalı</title>
+  <link rel="stylesheet" href="anasayfa.css">
+</head>
+<body>
+  <header>
+    <h1>NEÜ Uzay ve Havacılık Mühendisliği Portalı</h1>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="hesaplamalar.html">Hesaplamalar</a></li>
+      <li><a href="formuller.html">Formüller</a></li>
+      <li><a href="notlar.html">Notlar</a></li>
+      <li><a href="blog.html">Blog / Haber</a></li>
+      <li><a href="projeler.html">Projeler</a></li>
+      <li><a href="topluluk.html">Topluluk</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🌭 Günün Uzay Bilgisi -->
+  <section>
+    <h2>🌭 Günün Uzay Bilgisi</h2>
+    <div class="fact-box">
+      <p id="uzayBilgisiKutusu">Yükleniyor...</p>
+      <div class="like-section">
+        <button id="likeBtn">❤️ Beğen</button>
+        <span id="likeCount">0 beğeni</span>
+      </div>
+      <div class="yorumlar">
+        <h4>Yorumlar</h4>
+        <ul id="yorumListesi"></ul>
+        <input type="text" id="yorumInput" placeholder="Yorum yaz...">
+        <button id="yorumEkleBtn">Yorum Yap</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📡 Uydu Kartları -->
+  <section>
+    <h2>📡 Türkiye'nin Sahip Olduğu Uydular</h2>
+    <div class="satellite-cards">
+      <div class="card">
+        <img src="6a.png" alt="TÜRKSAT 6A">
+        <h3>TÜRKSAT 6A</h3>
+        <ul>
+          <li><strong>Fırlatma Tarihi:</strong> 8 Temmuz 2024</li>
+          <li><strong>Fırlatma Yeri:</strong> Cape Canaveral, ABD</li>
+          <li><strong>Taşıyıcı Roket:</strong> SpaceX Falcon 9</li>
+          <li><strong>Yörünge:</strong> 42° Doğu (Jeostatik)</li>
+          <li><strong>Görev Süreci:</strong> 15 yıl</li>
+          <li><strong>Yerlilik Oranı:</strong> %81+</li>
+          <li><strong>Üreticiler:</strong> TÜBİTAK UZAY, TUSAŞ, ASELSAN, CTech</li>
+          <li><strong>Kapsama:</strong> Türkiye, Avrupa, Orta Doğu, Güney Asya</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="imece.jpg" alt="İMECE">
+        <h3>İMECE</h3>
+        <ul>
+          <li><strong>Fırlatma Tarihi:</strong> 15 Nisan 2023</li>
+          <li><strong>Fırlatma Yeri:</strong> Vandenberg Uzay Üssü, ABD</li>
+          <li><strong>Taşıyıcı Roket:</strong> SpaceX Falcon 9</li>
+          <li><strong>Yörünge:</strong> 680 km Alçak Dünya Yörüngesi (LEO)</li>
+          <li><strong>Görüntü Çözünürlüğü:</strong> < 1 metre</li>
+          <li><strong>Görev:</strong> Yer gözlemi (sivil ve askeri)</li>
+          <li><strong>Üretici:</strong> TÜBİTAK UZAY</li>
+          <li><strong>Görev Süreci:</strong> 5+ yıl</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="göktürk.jpg" alt="GÖKTÜrK-1">
+        <h3>GÖKTÜrK-1</h3>
+        <ul>
+          <li><strong>Fırlatma Tarihi:</strong> 5 Aralık 2016</li>
+          <li><strong>Fırlatma Yeri:</strong> Fransız Guyanası</li>
+          <li><strong>Taşıyıcı Roket:</strong> VEGA</li>
+          <li><strong>Yörünge:</strong> 700 km Güneş Eşzamanlı Yörünge (SSO)</li>
+          <li><strong>Görüntü Çözünürlüğü:</strong> < 0.5 metre</li>
+          <li><strong>Görev:</strong> Askeri ve sivil görüntüleme</li>
+          <li><strong>Üretici:</strong> TUSAŞ - Leonardo ortaklığı</li>
+          <li><strong>Görev Süreci:</strong> 7+ yıl</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🌍 Canlı Uydu Haritası</h2>
+    <iframe src="https://www.stuffin.space/" height="500"></iframe>
+  </section>
+
+  <section>
+    <h2>📟️ Tanıtım Videosu</h2>
+    <iframe height="315" src="https://www.youtube.com/watch?v=s3LxKRoqNXI" allowfullscreen></iframe>
+  </section>
+
+  <footer>
+    &copy; 2025 NEÜ Uzay ve Havacılık Müh. TURKAY Topluluğu | Tüm hakları saklıdır.
+  </footer>
+
+  <script type="module" src="anasayfa.js"></script>
+</body>
+</html>

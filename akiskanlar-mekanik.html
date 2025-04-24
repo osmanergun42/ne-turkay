@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akışkanlar Mekaniği Hesaplamaları</title>
+  <link rel="stylesheet" href="akiskanlar.css">
+</head>
+<body>
+  <header>
+    <h1>Akışkanlar Mekaniği II - Hesaplamalar</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="hesaplamalar.html">← Geri</a></li>
+        <li><a href="formuller.html">Formüller</a></li>
+        <li><a href="notlar.html">Notlar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>🔄 Bernoulli Denklemi</h2>
+    <form id="bernoulliForm">
+      <label for="p1">P₁ (Pa):</label>
+      <input type="number" id="p1" required>
+
+      <label for="v1">V₁ (m/s):</label>
+      <input type="number" id="v1" required>
+
+      <label for="z1">Z₁ (m):</label>
+      <input type="number" id="z1" required>
+
+      <label for="v2">V₂ (m/s):</label>
+      <input type="number" id="v2" required>
+
+      <label for="z2">Z₂ (m):</label>
+      <input type="number" id="z2" required>
+
+      <label for="rho">Yoğunluk ρ (kg/m³):</label>
+      <input type="number" id="rho" value="1000" required>
+
+      <button type="submit">P₂'yi Hesapla</button>
+    </form>
+    <div id="sonuc"></div>
+  </section>
+
+  <!-- 📊 Reynolds Sayısı Hesaplama -->
+  <section>
+    <h2>🔄 Reynolds Sayısı</h2>
+    <form id="reynoldsForm">
+      <label for="rhoRe">Yoğunluk ρ (kg/m³):</label>
+      <input type="number" id="rhoRe" value="1000" required>
+
+      <label for="vRe">Hız v (m/s):</label>
+      <input type="number" id="vRe" required>
+
+      <label for="dRe">Boru Çapı D (m):</label>
+      <input type="number" id="dRe" required>
+
+      <label for="muRe">Viskozite μ (Pa·s):</label>
+      <input type="number" id="muRe" required>
+
+      <button type="submit">Reynolds Sayısını Hesapla</button>
+    </form>
+    <div id="reynoldsSonuc"></div>
+  </section>
+
+  <!-- 🏎️ Mach Sayısı Hesaplama -->
+  <section>
+    <h2>🔄 Mach Sayısı</h2>
+    <form id="machForm">
+      <label for="vMach">Hız v (m/s):</label>
+      <input type="number" id="vMach" required>
+
+      <label for="aMach">Ses Hızı a (m/s):</label>
+      <input type="number" id="aMach" value="343" required>
+
+      <button type="submit">Mach Sayısını Hesapla</button>
+    </form>
+    <div id="machSonuc"></div>
+  </section>
+
+  <script type="module" src="akiskanlar.js"></script>
+</body>
+</html>

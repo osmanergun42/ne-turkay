@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7f9;
+  }
+  
+  header {
+    background-color: #0d47a1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .navbar {
+    background-color: #1565c0;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    color: #ffcc00;
+  }
+  
+  section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  h2 {
+    color: #0d47a1;
+    margin-bottom: 20px;
+  }
+  
+  .calculator-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .calculator-list li {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .calculator-list li a {
+    text-decoration: none;
+    color: #0d47a1;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .calculator-list li a:hover {
+    color: #ffcc00;
+  }
+  

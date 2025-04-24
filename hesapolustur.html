@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Hesap Oluştur</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0f2f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #00796b;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #00796b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .link {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .link a {
+      color: #00796b;
+      text-decoration: none;
+    }
+
+    .link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Hesap Oluştur</h2>
+    <form id="registerForm">
+      <input type="email" id="email" placeholder="E-posta" required>
+      <input type="password" id="password" placeholder="Şifre" required>
+      <button type="submit">Kaydol</button>
+    </form>
+    <div class="link">
+      <p>Zaten hesabınız var mı? <a href="login.html">Giriş Yap</a></p>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBvW1DcksQEB2sYYuwNkeEXXd1AqtM0wjo",
+      authDomain: "sitem-82182.firebaseapp.com",
+      projectId: "sitem-82182",
+      storageBucket: "sitem-82182.firebasestorage.app",
+      messagingSenderId: "374365308439",
+      appId: "1:374365308439:web:5f910b801f4404d0babe52"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const form = document.getElementById("registerForm");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      try {
+        await createUserWithEmailAndPassword(auth, email, password);
+        alert("Kayıt başarılı! Giriş sayfasına yönlendiriliyorsunuz.");
+        window.location.href = "login.html";
+      } catch (error) {
+        alert("Hata: " + error.message);
+      }
+    });
+  </script>
+</body>
+</html>
